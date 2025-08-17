@@ -1,0 +1,8 @@
+fastapi==0.95.2
+uvicorn[standard]==0.22.0
+python-multipart==0.0.6
+Pillow==10.4.0
+# numpy==1.26.4
+# TensorFlow is optional but required to load the provided .h5 models. Install if you plan to run predictions.
+# If you don't want the full tensorflow package, install tensorflow-cpu instead (may have different performance characteristics).
+# tensorflow==2.14.0
