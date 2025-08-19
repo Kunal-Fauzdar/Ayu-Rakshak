@@ -110,7 +110,7 @@ const RegisterPage = () => {
               <path d="M12 8v8M8 12h8"/>
             </svg>
           </div>
-          <h1>Hospital Portal</h1>
+          <h1>Ayu-Rakshak</h1>
           <p>Secure access to your healthcare information</p>
         </div>
 
@@ -183,3 +183,4 @@ const RegisterPage = () => {
 };
 
 export default RegisterPage;
+
