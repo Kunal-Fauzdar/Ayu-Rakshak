@@ -4,14 +4,15 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "dev": "nodemon src/app.js",
-    "start": "node src/app.js",
+    "dev": "concurrently \"nodemon src/app.js\" \"cd ../model_backend && uvicorn main:app --host 0.0.0.0 --port 8000 --reload\"",
+    "start": "concurrently \"node src/app.js\" \"cd ../model_backend && uvicorn main:app --host 0.0.0.0 --port 8000\"",
     "prod": "pm2 src/app.js"
   },
   "author": "kunal fauzdar",
   "license": "ISC",
   "description": "",
   "dependencies": {
+    "concurrently": "^8.2.0",
     "bcrypt": "^6.0.0",
     "cors": "^2.8.5",
     "crypto": "^1.0.1",

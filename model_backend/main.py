@@ -7,6 +7,7 @@ from typing import Any, Dict, Optional
 from tensorflow.keras.preprocessing import image
 
 from fastapi import FastAPI, UploadFile, File, HTTPException, Form
+from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel
 from PIL import Image
@@ -41,6 +42,15 @@ def inv_class_mapping_for(model_name: str):
 
 
 app = FastAPI(title="Ayu-Rakshak Prediction API")
+
+# Allow CORS for local frontend during development. Adjust `allow_origins` for production.
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["http://localhost:3000", "http://127.0.0.1:3000", "http://localhost:5173"],
+    allow_credentials=True,
+    allow_methods=["*"],
+    allow_headers=["*"],
+)
 
 # MongoDB client/collection (initialized on startup)
 mongo_client: Optional[pymongo.MongoClient] = None

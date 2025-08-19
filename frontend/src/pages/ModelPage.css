@@ -1,0 +1,128 @@
+/* Dark themed page layout */
+.model-page {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    background: #0f1113;
+    color: #e6eef8;
+}
+
+/* Top header */
+.page-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 14px 24px;
+    background: #060708;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.02);
+    color: #cfe6ff;
+}
+.logo { font-weight: 700; }
+.top-actions { display:flex; gap:12px; }
+.ghost-btn { background: transparent; border: 1px solid rgba(255,255,255,0.06); color: #cfe6ff; padding:8px 12px; border-radius:8px; }
+.primary-btn { background: #2ea3ff; color:#071428; padding:8px 12px; border-radius:8px; border:none }
+
+/* Card container */
+.model-card {
+    width: 100%;
+    max-width: 1200px;
+    margin: 24px auto;
+    background: #0b0c0d;
+    border-radius: 8px;
+    padding: 24px;
+    border: 1px solid rgba(255,255,255,0.04);
+}
+.model-card.dark { background: linear-gradient(180deg, #0b0c0d, #070709) }
+.card-title { color: #dff1ff; margin:0 0 12px }
+
+.model-form { display:flex; flex-direction:column; gap:12px }
+
+.file-input-label { display:inline-flex; align-items:center; gap:10px; padding:10px 14px; border:1px dashed rgba(255,255,255,0.06); border-radius:6px; cursor:pointer; color:#cfe6ff }
+.file-input-label input{ display:none }
+
+.preview-wrap { position:relative; display:flex; flex-direction:column; gap:8px }
+.preview-image { max-width:320px; max-height:320px; border-radius:6px; border:1px solid rgba(255,255,255,0.04) }
+.clear-btn { background: rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.03); padding:6px 8px; border-radius:6px; cursor:pointer; color:#cfe6ff }
+.preview-placeholder { color:#9fb6d6; padding:20px; border:1px dashed rgba(255,255,255,0.04); border-radius:6px }
+
+/* Service cards (only MRI and X-ray used) */
+.services-grid { display:flex; gap:12px; margin-top:8px }
+.service-card { flex:1; display:flex; gap:12px; padding:18px; border-radius:8px; border:1px solid rgba(255,255,255,0.03); cursor:pointer; background: linear-gradient(180deg, rgba(255,255,255,0.01), transparent); position:relative }
+.service-card .service-icon { width:56px; height:56px; border-radius:12px; display:flex; align-items:center; justify-content:center; font-size:26px }
+.service-card .service-body { flex:1 }
+.service-card .service-label { font-weight:700; font-size:18px; color:#e6f6ff }
+.service-card .service-desc { color:#98b6d0; margin-top:6px }
+.service-card .service-sub { color:#6e8ba0; margin-top:8px; font-size:13px }
+.service-card:hover { transform: translateY(-4px); box-shadow:0 10px 30px rgba(0,0,0,0.6) }
+.service-card.selected { box-shadow:0 10px 30px rgba(74,124,255,0.08); border-color: rgba(74,124,255,0.5) }
+.selected-badge { position:absolute; right:16px; top:12px; background:#e9f2ff; color:#154b86; padding:6px 10px; border-radius:12px; font-size:12px }
+.bg-purple { background:#6b5bff; color:#fff }
+.bg-orange { background:#ff8a4b; color:#fff }
+
+.actions { display:flex; gap:12px; margin-top:14px }
+.submit-btn { background:#2ea3ff; color:#071428; padding:12px 18px; border:none; border-radius:8px; cursor:pointer }
+
+.message { color:#cfe6ff; padding:8px; background:rgba(255,255,255,0.02); border-radius:6px }
+.result-card { margin-top:12px; padding:12px; border:1px solid rgba(255,255,255,0.03); border-radius:6px; background:rgba(255,255,255,0.02) }
+.pred-json { white-space:pre-wrap; background:#071428; padding:8px; border-radius:6px; border:1px solid rgba(255,255,255,0.02); margin-top:8px; overflow:auto; max-height:320px; color:#d9eefc }
+
+/* Large dotted drop area with centered upload button */
+.drop-area { display:flex; align-items:center; justify-content:center; min-height:180px; border:2px dashed rgba(255,255,255,0.06); border-radius:8px; padding:12px; cursor:pointer; margin-top:16px }
+.drop-area.big { min-height:220px; border-radius:10px; border-style:dashed }
+.drop-area.active { border-color:#4a7cff; background: rgba(74,124,255,0.02) }
+.drop-prompt { color:#9fb6d6 }
+.file-input-inline { color:#6ec6ff; cursor:pointer }
+.preview-image-small { max-width:120px; max-height:120px; border-radius:6px; border:1px solid rgba(255,255,255,0.04) }
+.inline-row { display:flex; gap:8px; align-items:center }
+.small-label { font-size:0.9rem; color:#9fb6d6 }
+.input-small { padding:8px; border:1px solid rgba(255,255,255,0.04); border-radius:6px; background:transparent; color:#cfe6ff }
+
+.progress-wrap { position:relative; height:18px; background:rgba(255,255,255,0.03); border-radius:10px; overflow:hidden; margin-top:8px }
+.progress-bar { position:absolute; left:0; top:0; bottom:0; background: linear-gradient(90deg,#6aa0ff,#4a7cff) }
+.progress-label { position:absolute; right:8px; top:0; font-size:12px; color:#071428; padding:1px 6px }
+
+.recent-list { margin-top:12px; border-top:1px dashed rgba(255,255,255,0.03); padding-top:12px }
+.recent-list ul { list-style:none; padding:0; margin:0; display:flex; flex-direction:column; gap:6px }
+.recent-id { font-family:monospace; background:#071428; padding:4px 8px; border-radius:4px; border:1px solid rgba(255,255,255,0.02); color:#cfe6ff }
+.small-btn { margin-left:8px; padding:4px 8px; border-radius:6px; border:1px solid rgba(255,255,255,0.04); background:transparent; color:#cfe6ff; cursor:pointer }
+
+/* Centered upload icon/button inside large drop area */
+.drop-center { display:flex; align-items:center; justify-content:center; }
+.upload-btn { width:56px; height:56px; border-radius:50%; background:#071428; border: 2px solid rgba(255,255,255,0.04); display:flex; align-items:center; justify-content:center; font-size:22px; color:#6ec6ff }
+
+@media(max-width:920px) { .services-grid { flex-direction:column } .service-card { width:100% } }
+@media(max-width:520px) { .model-card { padding:16px } .preview-image { max-width:100% } }
+
+/* Diagnostic report */
+.diagnostic-report { margin-top:12px; display:flex; flex-direction:column; gap:12px }
+.report-header { display:flex; gap:16px; align-items:center; color:#cfe6ff }
+.report-block { padding:12px; border-radius:8px; background: rgba(255,255,255,0.02); border:1px solid rgba(255,255,255,0.02) }
+.report-title { font-weight:700; font-size:16px; color:#dff1ff; margin-bottom:6px }
+.report-label { margin-bottom:6px }
+.probs { display:flex; flex-direction:column; gap:8px; margin-top:8px }
+.prob-row { display:flex; align-items:center; gap:8px }
+.prob-label { width:28px; color:#9fb6d6 }
+.prob-bar { flex:1; height:10px; background: rgba(255,255,255,0.03); border-radius:6px; overflow:hidden }
+.prob-fill { height:100%; background: linear-gradient(90deg,#6aa0ff,#4a7cff) }
+.prob-val { width:70px; text-align:right; font-family:monospace; color:#cfe6ff }
+
+.report-summary {
+	background: #2a2a3a;
+	padding: 16px;
+	border-radius: 8px;
+	margin-top: 16px;
+	border-left: 4px solid #007acc;
+	white-space: pre-line;
+	line-height: 1.6;
+	font-size: 14px;
+}
+
+.report-summary strong {
+	color: #ffffff;
+}
+
+.report-summary .medical-info {
+	margin-top: 16px;
+	padding-top: 16px;
+	border-top: 1px solid #444;
+}

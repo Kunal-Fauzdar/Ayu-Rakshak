@@ -5,6 +5,7 @@ import LandingPage from './pages/landing';
 import LoginPage from './pages/LoginPage';
 import PatientPage from './pages/PatientPage';
 import DoctorPage from './pages/DoctorPage';
+import ModelPage from './pages/ModelPage';
 function App() {
   return (
     <Router>
@@ -14,6 +15,7 @@ function App() {
           <Route path="/login" element={<LoginPage />} />
           <Route path="/patient" element={<PatientPage />} />
           <Route path="/doctor" element={<DoctorPage />} />
+          <Route path="/model" element={<ModelPage />} />
       </Routes>
     </Router>
   );
