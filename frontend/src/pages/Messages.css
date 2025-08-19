@@ -1,0 +1,72 @@
+/* Messages styling */
+.messages-app {
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.messages-header h2 {
+    color: #28a745;
+}
+
+.message-card, .request-card {
+    border: none;
+    border-radius: 15px;
+    transition: all 0.3s ease;
+}
+
+.message-card:hover, .request-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 35px rgba(40, 167, 69, 0.1);
+}
+
+.message-avatar, .request-avatar {
+    width: 50px;
+    height: 50px;
+    font-size: 1.2rem;
+}
+
+.appointment-details {
+    border-left: 4px solid #28a745;
+}
+
+.schedule-form {
+    border-left: 4px solid #17a2b8;
+}
+
+.empty-state i {
+    opacity: 0.5;
+}
+
+.badge {
+    font-size: 0.75rem;
+    padding: 0.5rem 0.75rem;
+    border-radius: 10px;
+}
+
+.bg-success-subtle {
+    background-color: rgba(40, 167, 69, 0.1) !important;
+}
+
+.btn {
+    border-radius: 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn:hover {
+    transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .message-card, .request-card {
+        margin-bottom: 1rem;
+    }
+    
+    .message-avatar, .request-avatar {
+        width: 40px;
+        height: 40px;
+        font-size: 1rem;
+    }
+}

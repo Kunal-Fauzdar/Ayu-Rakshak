@@ -1,0 +1,63 @@
+/* Clean Doctor App Styles */
+.doctor-app {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Doctor Card Hover Effects */
+.doctor-card {
+  transition: all 0.3s ease;
+  border-radius: 15px;
+  cursor: pointer;
+}
+
+.doctor-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 30px rgba(40, 167, 69, 0.2) !important;
+}
+
+/* Doctor Image */
+.doctor-image {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 3px solid #e9ecef;
+  transition: all 0.3s ease;
+}
+
+.doctor-card:hover .doctor-image {
+  border-color: #28a745;
+}
+
+/* Button */
+.btn-success {
+  background-color: #28a745;
+  border-color: #28a745;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+.btn-success:hover {
+  background-color: #218838;
+  transform: translateY(-2px);
+}
+
+/* Badge */
+.badge {
+  border-radius: 12px;
+  font-weight: 600;
+}
+
+/* Card Title */
+.card-title {
+  color: #212529;
+  font-weight: 700;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .doctor-image {
+    width: 80px;
+    height: 80px;
+  }
+}
